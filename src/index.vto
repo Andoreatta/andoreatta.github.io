@@ -1,0 +1,24 @@
+---
+title: Index
+layout: layout.vto
+links:
+    - text: Github Profile
+      url: https://github.com/andoreatta
+---
+
+<article>
+  <header>
+    <h1>{{ site.title }}</h1>
+  </header>
+
+  <ul>
+    {{ for link of links }}
+    <li>
+      <a href="{{ link.url }}">
+        {{ link.text }}
+      </a>
+    </li>
+    {{ /for }}
+  </ul>
+
+</article>
