@@ -1,24 +1,30 @@
 ---
 title: Index
-layout: layout.vto
-links:
-    - text: Github Profile
-      url: https://github.com/andoreatta
+layout: base.vto
 ---
+<div class="grid grid-cols-4 gap-10 mx-auto px-40 py-10">
 
-<article>
-  <header>
-    <h1>{{ site.title }}</h1>
-  </header>
+    <section class="bg-chestnut-600 p-8 col-span-3 rounded-lg shadow-2xl">
+        <h2 class="text-4xl font-bold text-center text-khaki-200">~= Posts =~</h2>
+        <ul class="mt-4 space-y-4">
+            {{for post of search.pages("post", "order=desc", 6)}}
+                <li class="text-khaki-100 bg-khaki-300 p-2 rounded">
+                    <a href="{{post.url}}" class="flex items-center space-x-4">
+                        <img src="{{post.image}}" alt="{{post.title}}" class="w-24 h-24 object-cover rounded">
+                        <div>
+                            <h2 class="text-xl font-bold text-chestnut-600 hover:text-chestnut-800">{{post.title}}</h2>
+                            <p class="text-sm text-licorice-900">{{post.description}}</p>
+                            <p class="text-sm text-licorice-500">{{post.date}}</p>
+                        </div>
+                    </a>
+                </li>
+            {{/for}}
+        </ul>
 
-  <ul>
-    {{ for link of links }}
-    <li>
-      <a href="{{ link.url }}">
-        {{ link.text }}
-      </a>
-    </li>
-    {{ /for }}
-  </ul>
+    </section>
 
-</article>
+    <section class="bg-chestnut-600 p-8 rounded-lg shadow-2xl">
+        <h2 class="text-4xl font-bold text-center text-khaki-200">~= Projects =~</h2>
+    </section>
+
+</div>

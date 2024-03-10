@@ -1,0 +1,15 @@
+<footer class="bg-chestnut-700 text-center text-khaki-200 py-6 mt-8">
+    <section>
+        <ul class="mt-2 grid grid-cols-1 gap-2">
+            {{ for link of links }}
+            <li>
+                <a href="{{ link.url }}" class="text-lg hover:underline hover:text-khaki-400 transition-colors duration-200">
+                    <img src="{{ link.icon }}" class="w-4 h-4 inline-block mr-2 align-middle">
+                    <span class="align-middle">{{ link.text }}</span>
+                </a>
+            </li>
+            {{ /for }}
+        </ul>
+        <p class="mt-4 text-base">© 2024 srl.exp.net -- No f*cks given</p>
+    </section>
+</footer>
