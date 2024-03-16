@@ -10,3 +10,15 @@
 body {
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
+
+.shadow-echo {
+    text-shadow: -6px 3px rgba(255, 255, 255, 0.5),
+                 -12px 6px rgba(200, 200, 200, 0.5),
+                 -18px 9px rgba(150, 150, 150, 0.5);
+}
+
+.gradient-text {
+    background: linear-gradient(to bottom, white, transparent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

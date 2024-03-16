@@ -2,29 +2,33 @@
 title: Index
 layout: base.vto
 ---
-<div class="grid grid-cols-4 gap-10 mx-auto px-40 py-10">
+<div class="gap-10 mx-auto px-40 py-10">
 
-    <section class="bg-chestnut-600 p-8 col-span-3 rounded-lg shadow-2xl">
-        <h2 class="text-4xl font-bold text-center text-khaki-200">~= Posts =~</h2>
-        <ul class="mt-4 space-y-4">
-            {{for post of search.pages("post", "order=desc", 6)}}
-                <li class="text-khaki-100 bg-khaki-300 p-2 rounded">
-                    <a href="{{post.url}}" class="flex items-center space-x-4">
-                        <img src="{{post.image}}" alt="{{post.title}}" class="w-24 h-24 object-cover rounded">
+<section class="p-8">
+    <pre>
+
+    </pre>
+</section>
+
+    <section class="p-8 border-dashed border-4 border-rose-300">
+        <ul>
+            {{for post of search.pages("post", "order=desc", 3)}}
+                <li>
+                    <a href="{{post.url}}">
                         <div>
-                            <h2 class="text-xl font-bold text-chestnut-600 hover:text-chestnut-800">{{post.title}}</h2>
-                            <p class="text-sm text-licorice-900">{{post.description}}</p>
-                            <p class="text-sm text-licorice-500">{{post.date}}</p>
+                            <h2 class="text-4xl font-black uppercase border-b-2 border-white">{{post.title}} :: {{post.subject}}</h2>
+                            <p class="text-md">{{post.date}}</p>
+                            <article class="text-lg py-4 gradient-text">
+                                {{post.content}}
+                            </article>
+                            <div class="flex">
+                                <button class="ml-auto font-black text-3xl  underline py-2">CONTINUE READING</button>
+                            </div>
                         </div>
                     </a>
                 </li>
             {{/for}}
         </ul>
-
-    </section>
-
-    <section class="bg-chestnut-600 p-8 rounded-lg shadow-2xl">
-        <h2 class="text-4xl font-bold text-center text-khaki-200">~= Projects =~</h2>
     </section>
 
 </div>

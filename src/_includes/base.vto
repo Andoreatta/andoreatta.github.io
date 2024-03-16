@@ -20,21 +20,17 @@
         });
     </script>
 
-    <body class="bg-gradient-to-tl from-khaki-200 to-khaki-300 flex flex-col min-h-screen text-khaki-100">
-    
+    <body class="bg-black text-white flex flex-col min-h-screen ">
         {{comp.navbar()}}
-
         <main class="flex-grow">
             {{ content }}
         </main>
-
         {{comp.footer({
             links: [
-                { text: 'Github', url: 'https://github.com/andoreatta', icon: '../assets/icons/github.svg'},
-                { text: 'Telegram', url: 'https://t.me/lpierra', icon: '../assets/icons/telegram.svg'}
+                { text: 'GITHUB', url: 'https://github.com/andoreatta'},
+                { text: 'TELEGRAM', url: 'https://t.me/lpierra'}
             ]
         })}}
-
     </body>
 </html>
 
